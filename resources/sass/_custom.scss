@@ -1,0 +1,99 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 70px !important;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  color: rgb(118, 118, 118);
+}
+
+#primary-navigation-bar {
+    height: 70px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+// Sweetalert input custom style
+.swal2-popup {
+    width: 28em;
+    max-width: 100%;
+    padding: 1em;
+    border-radius: 0.3125em;
+    background: #fff;
+    font-size: 1rem;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #3085d6;
+    color: #fff;
+    font-size: .9em;
+}
+
+.swal2-styled.swal2-cancel {
+    background-color: #aaa;
+    color: #fff;
+    font-size: .9em;
+}
+
+.swal2-title {
+    font-size: 1.6em;
+}
+
+.swal2-input, .swal2-file, .swal2-textarea {
+    font-size: 1em;
+}
